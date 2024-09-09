@@ -16,7 +16,7 @@ const videoLink = "https://youtu.be/" + video
 	<div class="bg-gray-700 p-3">
 		<p class="text-xl text-gray-100">{title}</p>
 	</div>
-	<div class="bg-gray-100 p-3">
+	<div class="bg-gray-300 p-3">
 
 		<p class="text-base pb-3" set:html={info}></p>
 
@@ -35,7 +35,7 @@ const videoLink = "https://youtu.be/" + video
 
 		<div class="flex justify-between">
 			<div class="m-auto flex">
-				{(video) && <a href={videoLink} class="font-medium text-blue-600 underline dark:text-blue-500 hover:no-underline">video</a>
+				{(video) && <a href={videoLink} class="font-medium text-blue-600 underline dark:text-blue-500 hover:no-underline">video</a>}
 			</div>
 		</div>
 	</div>
