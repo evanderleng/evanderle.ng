@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { getCollection } from 'astro:content';
+
+const projects = await getCollection("projects")
+console.log("lol", projects)
+---
+
+<Layout title="evanderle.ng">
+	<main>
+
+		<h1 class="text-2xl px-2 py-3">Projects</h1>
+		
+		<div class="container m-auto grid grid-cols-1 gap-3">
+
+			{projects.map(project => 
+				<ProjectCard 
+				title={project.data.title}
+				info={project.data.info}
+				video={project.data.video}
+				link={project.data.link}
+				source={project.data.source}/>
+			)}
+		
+		</div>
+
+
+
+	</main>
+</Layout>

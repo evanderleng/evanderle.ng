@@ -1,0 +1,30 @@
+---
+import NavButton from './NavButton.astro';
+---
+<ul class="flex justify-between flex-wrap >
+
+	<div class="flex">
+		<li>
+			<p class="rounded-md text-base font-medium text-gray-600">еvаnder lеng</p>
+		</li>
+	</div>
+
+	<div class="flex flex-wrap">
+		<NavButton
+			href="/",
+			label="Index"
+		/>
+		<NavButton
+			href="/projects",
+			label="Projects"
+		/>
+		<!-- <NavButton
+			href="/others",
+			label="Others"
+		/> -->
+		<NavButton
+			href="/contact",
+			label="Contact"
+		/>
+	</div>
+</ul> 
