@@ -1,0 +1,31 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+import Navigation from '../components/Navigation.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="mx-auto max-w-4xl p-4">
+		<header class="bg-gray-100 p-3 mb-3">
+			<Navigation />
+		</header>
+		<slot />
+
+		<footer>
+			<p class="mx-auto p-7 text-center">Made by Evаnder Lеng, ©2024</p>
+		</footer>
+	</body>
+</html>
